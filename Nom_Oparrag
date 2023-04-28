@@ -1,4 +1,0 @@
-#!/bin/bash
-
-NOM="oscar"
-if [[ "${NOM} == "oscar" ]]
