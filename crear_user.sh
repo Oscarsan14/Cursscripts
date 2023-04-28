@@ -38,3 +38,11 @@ fi
 passwd -e ${USER_NAME}
 
 exit 0
+
+if [[ ${UID} -ne 0 ]]
+then
+   echo "Usage ${0}"
+   echo
+   echo "Has de ser root"
+   exit 1
+fi 
