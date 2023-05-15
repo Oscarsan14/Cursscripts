@@ -79,7 +79,7 @@ whoami
 echo 
 
 
-# 9) Modifica els permisos del directori despeses per que només el propietari hi tingui accés
+# 9) Modifica els permisos echo "Nom de l'usuari: "del directori despeses per que només el propietari hi tingui accés
 echo "EXERCICIC 9"
 echo "---------------------------------------------------"
 chmod u+x /tmp/prova/despeses
@@ -90,7 +90,7 @@ echo
 # 10) Fes una copia del directori /tmp/prova a /tmp/copia
 echo "EXERCICIC 10"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+cp -r /tmp/prova /tmp/copia
 whoami
 echo 
 
@@ -109,7 +109,7 @@ echo
 # 12) Mostra el contingut del directori /tmp/copia en forma d'arbre
 echo "EXERCICIC 12"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+tree /tmp/copia
 whoami
 echo 
 
@@ -117,7 +117,7 @@ echo
 # 13) Mostra el contingut del directori /tmp/copies en forma d'arbre
 echo "EXERCICIC 13"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+tree /tmp/copies
 whoami
 echo 
 
@@ -125,7 +125,7 @@ echo
 # 14) Esborra els directoris /tmp/copies i /tmp/prova i tot el seu contingut
 echo "EXERCICIC 14"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+rm -r /tmp/copies && /tmp/prova
 whoami
 echo 
 
@@ -134,7 +134,7 @@ echo
 #     Usa la comanda df, pots obtenir ajuda amb df --help o man df 
 echo "EXERCICIC 15"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+df -h
 whoami
 echo 
 
@@ -143,7 +143,7 @@ echo
 #     Usa la comanda free, pots obtenir ajuda amb free --help o man free
 echo "EXERCICIC 16"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+free -h
 whoami
 echo 
 
@@ -151,8 +151,14 @@ echo
 # 17) Crea un nou script, al directori actual, anometat system_info.sh, que mostri informació del disc dur i de la memoria RAM usant les comandes anteriors.
 #     Crida aquest nou script que acabes de crear.
 echo "EXERCICIC 17"
-echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+echo "Ejecutando el script system_info.sh..."
+echo "--------------------------------------"
+
+./system_info.sh
+
+echo "--------------------------------------"
+echo "Script system_info.sh finalizado."
+
 whoami
 echo 
 
@@ -161,7 +167,7 @@ echo
 #     Usa la comadna cat
 echo "EXERCICIC 18"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+cat ./system_info.sh
 whoami
 echo 
 
@@ -170,7 +176,7 @@ echo
 #     Has d'usar la comanda cat
 echo "EXERCICIC 19"
 echo "---------------------------------------------------"
-echo "Nom de l'usuari: "
+cat *.sh
 whoami
 echo 
 
