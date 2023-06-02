@@ -14,7 +14,7 @@ fi
 # El nom del script que s'executa
 echo "${0}"
 # El PATH i el filename del script
-echo "direcori: $(dirname ${0}) fitxer: $(basename ${0})"
+echo "directori: $(dirname ${0}) fitxer: $(basename ${0})"
 # El número de paràmetres
 NUMERO_PARAMETRES=${#}
 echo "NUMERO DE PARAMETRES: ${NUMERO_PARAMETRES}"
