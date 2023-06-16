@@ -10,7 +10,6 @@ echo "Bienvenido al examen de scripts, yo soy oscar. Hoy es $date y son las $hor
 # examen_scripts/
 # examen_scripts/apunts
 # examen_scripts/exercicis
-mkdir examen_scripts/apunts && examen_scripts/exercicis
 
 # Modifica els permisos del directori examen_scripts per que tothom el pugui llegir i el propietari 
 # el pugui llegir, escriure i executar.
@@ -21,19 +20,26 @@ nota_examen=5
 # Mostra una frase per pantalla com aquesta: La nota del meu examen és un 7.
 echo "la nota de tu examen es un ${nota_examen}"
 # Demana a l'usuari si ha tingut bona aptitud a classe. 
-read -p "¿Has tenido buena aptitud en clase? "  
+read -p "¿Has tenido buena aptitud en clase? "  aptitud
 # Si contesta "Sí" suma-li un punt a la nota de l'examen, si contesta "No" resta-n'hi un.
-
     if [[ ${aptitud} -eq si ]]; then
-        echo "la nota de tu examen es un $((nota_examen+1))"
+        nota_examen=$(( nota+1  ))
+        echo "Nota actual = $nota_examen"    
     fi
-
-    if [[ ${aptitud} -eq no ]]; then
+        
+    if [[ ${aptitud} -eq ${2} ]]; then
         echo "la nota de tu examen es un $((nota_examen-1))"
     fi
 
-
 # Si l'alumne ha aprovat ha de sortir un missatge com: la teva nota final és un 5, has aprovat
-if [[ ${nota_examen} -ge 5 ]]; then
-    echo "Tu nota final es un "
+
+    if [[ ${aptitud} -ge 5 ]]; then
+        echo "Tu nota final es un 5, has aprovado"
+    fi
+
 # Si l'alumne ha suspès ha de sortir un misstge com: la teva nota és un 3, has suspès
+
+    if [[ ${aptitud} -le 5 ]]; then
+        echo "Tu nota final es un 3, has suspendido"
+    fi
+
